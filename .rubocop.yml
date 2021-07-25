@@ -1,0 +1,28 @@
+require:
+  - rubocop-packaging
+  - rubocop-performance
+
+AllCops:
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  TargetRubyVersion: 2.4
+  SuggestExtensions: false
+  NewCops: enable
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*.rb
+
+Layout/EmptyLinesAroundAttributeAccessor: # (0.83)
+  Enabled: true
+
+Layout/LineLength:
+  Exclude:
+    - spec/**/*.rb
+
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+
+Style/Documentation:
+  Exclude:
+    - 'spec/**/*'
