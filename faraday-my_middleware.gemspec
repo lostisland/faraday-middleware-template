@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-$LOAD_PATH.push File.expand_path('lib', __dir__)
-
-require 'faraday/my_middleware/version'
+require_relative 'lib/faraday/my_middleware/version'
 
 Gem::Specification.new do |spec|
   spec.name = 'faraday-my_middleware'
