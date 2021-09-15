@@ -30,6 +30,8 @@ In this template repository, the placeholder for your chosen adapter name is `My
 So once you decide on the final name you want to use you should update all occurrences of `MyMiddleware` and all files
 with `my_middleware` in their name with the new name you chose.
 
+Also don't forget to mention yourself as author in `*.gemspec` file and `LICENSE.md`.
+
 ### Main implementation
 
 The bulk of the implementation is in the `Faraday::Middleware::MyMiddleware` class.
