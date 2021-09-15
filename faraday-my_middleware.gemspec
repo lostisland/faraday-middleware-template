@@ -20,13 +20,14 @@ Gem::Specification.new do |spec|
 
   spec.metadata = {
     'bug_tracker_uri' => "#{github_uri}/issues",
+    'changelog_uri' => "#{github_uri}/blob/v#{spec.version}/CHANGELOG.md",
     'documentation_uri' => "http://www.rubydoc.info/gems/#{spec.name}/#{spec.version}",
     'homepage_uri' => spec.homepage,
     'source_code_uri' => github_uri,
     'wiki_uri' => "#{github_uri}/wiki"
   }
 
-  spec.files = Dir['lib/**/*', 'README.md', 'LICENSE.md']
+  spec.files = Dir['lib/**/*', 'README.md', 'LICENSE.md', 'CHANGELOG.md']
 
   spec.required_ruby_version = '>= 2.4', '< 4'
 
