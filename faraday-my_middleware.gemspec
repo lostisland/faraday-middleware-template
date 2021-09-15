@@ -9,18 +9,26 @@ Gem::Specification.new do |spec|
   spec.email = ['your_name@gmail.com']
 
   spec.summary = 'Faraday middleware for MyMiddleware'
-  spec.description = 'Faraday middleware for MyMiddleware'
-  spec.homepage = 'https://github.com/lostisland/faraday-my_middleware'
+  spec.description = <<~DESC
+    Faraday middleware for MyMiddleware
+  DESC
   spec.license = 'MIT'
 
-  spec.required_ruby_version = Gem::Requirement.new('>= 2.4.0')
+  github_uri = "https://github.com/your_nickname/#{spec.name}"
 
-  spec.metadata['homepage_uri'] = spec.homepage
-  spec.metadata['source_code_uri'] = 'https://github.com/lostisland/faraday-my_middleware'
-  spec.metadata['changelog_uri'] = 'https://github.com/lostisland/faraday-my_middleware'
+  spec.homepage = github_uri
 
-  spec.files = Dir.glob('lib/**/*') + %w[README.md LICENSE.md]
-  spec.require_paths = ['lib']
+  spec.metadata = {
+    'bug_tracker_uri' => "#{github_uri}/issues",
+    'documentation_uri' => "http://www.rubydoc.info/gems/#{spec.name}/#{spec.version}",
+    'homepage_uri' => spec.homepage,
+    'source_code_uri' => github_uri,
+    'wiki_uri' => "#{github_uri}/wiki"
+  }
+
+  spec.files = Dir['lib/**/*', 'README.md', 'LICENSE.md']
+
+  spec.required_ruby_version = '>= 2.4', '< 4'
 
   spec.add_development_dependency 'faraday', '~> 1.0'
 
