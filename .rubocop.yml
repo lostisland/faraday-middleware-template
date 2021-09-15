@@ -2,6 +2,11 @@ require:
   - rubocop-packaging
   - rubocop-performance
 
+inherit_mode:
+  merge:
+    - Include
+    - Exclude
+
 AllCops:
   DisplayCopNames: true
   DisplayStyleGuide: true
