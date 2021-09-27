@@ -1,11 +1,17 @@
 require:
   - rubocop-packaging
   - rubocop-performance
+  - rubocop-rspec
+
+inherit_mode:
+  merge:
+    - Include
+    - Exclude
 
 AllCops:
   DisplayCopNames: true
   DisplayStyleGuide: true
-  TargetRubyVersion: 2.4
+  TargetRubyVersion: 2.5
   SuggestExtensions: false
   NewCops: enable
 
