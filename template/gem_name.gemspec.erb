@@ -1,20 +1,20 @@
 # frozen_string_literal: true
 
-require_relative 'lib/faraday/my_middleware/version'
+require_relative 'lib/<%= path %>/version'
 
 Gem::Specification.new do |spec|
-  spec.name = 'faraday-my_middleware'
-  spec.version = Faraday::MyMiddleware::VERSION
-  spec.authors = ['Your Name']
-  spec.email = ['your_name@gmail.com']
+  spec.name = '<%= name %>'
+  spec.version = <%= version_constant %>
+  spec.authors = [<%= author_name_string %>]
+  spec.email = ['<%= author_email %>']
 
-  spec.summary = 'Faraday middleware for MyMiddleware'
+  spec.summary = <%= summary_string %>
   spec.description = <<~DESC
-    Faraday middleware for MyMiddleware
+    <%= description %>
   DESC
   spec.license = 'MIT'
 
-  github_uri = "https://github.com/your_nickname/#{spec.name}"
+  github_uri = "<%= github_namespace_uri %>/#{spec.name}"
 
   spec.homepage = github_uri
 
@@ -39,7 +39,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'simplecov', '~> 0.21.0'
 
   spec.add_development_dependency 'rubocop', '~> 1.21.0'
-  spec.add_development_dependency 'rubocop-packaging', '~> 0.5'
+  spec.add_development_dependency 'rubocop-packaging', '~> 0.5.0'
   spec.add_development_dependency 'rubocop-performance', '~> 1.0'
   spec.add_development_dependency 'rubocop-rspec', '~> 2.0'
 end
