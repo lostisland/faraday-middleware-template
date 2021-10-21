@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require 'faraday'
+require_relative '../lib/<%= path %>'
+
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
   config.example_status_persistence_file_path = '.rspec_status'
@@ -12,16 +15,4 @@ RSpec.configure do |config|
   end
 
   config.order = :random
-end
-
-RSpec::Matchers.define :include_lines do |expected_lines|
-  match do |actual_text|
-    expected_lines.all? do |expected_line|
-      actual_text.lines.any? do |actual_line|
-        actual_line.strip == expected_line.strip
-      end
-    end
-  end
-
-  diffable
 end
