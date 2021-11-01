@@ -35,5 +35,7 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby }}
         bundler-cache: true
+    - name: Suppress git warnings
+      run: git config --global init.defaultBranch main
     - name: Run RSpec
       run: bundle exec rspec

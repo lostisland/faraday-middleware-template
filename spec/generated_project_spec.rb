@@ -21,21 +21,19 @@ RSpec.describe 'Generated project from template' do
     system "git config user.name \"#{author_name}\""
     system "git config user.email \"#{author_email}\""
 
-    Bundler.with_unbundled_env do
-      ## https://stackoverflow.com/a/25326622/2630849
-      ## https://stackoverflow.com/a/54626184/2630849
-      Open3.popen3(
-        "gem_generator #{gem_name} #{__dir__}/../template --namespace=#{namespace}"
-      ) do |stdin, _stdout, stderr, wait_thread|
-        Thread.new do
-          stderr.each { |l| puts l } unless stderr.closed?
-        end
-
-        stdin.puts gem_summary
-        stdin.close
-
-        wait_thread.value
+    ## https://stackoverflow.com/a/25326622/2630849
+    ## https://stackoverflow.com/a/54626184/2630849
+    Open3.popen3(
+      "gem_generator #{gem_name} #{__dir__}/../template --namespace=#{namespace}"
+    ) do |stdin, _stdout, stderr, wait_thread|
+      Thread.new do
+        stderr.each { |l| puts l } unless stderr.closed?
       end
+
+      stdin.puts gem_summary
+      stdin.close
+
+      wait_thread.value
     end
 
     Dir.chdir gem_name
