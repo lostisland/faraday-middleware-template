@@ -12,7 +12,7 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.0'
+        ruby-version: '3.1'
         bundler-cache: true
     - name: Run RuboCop
       run: bundle exec rubocop
@@ -28,6 +28,7 @@ jobs:
           - '2.6'
           - '2.7'
           - '3.0'
+          - '3.1'
     steps:
     - uses: actions/checkout@v2
     - name: Set up Ruby
