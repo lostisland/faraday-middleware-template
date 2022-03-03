@@ -167,8 +167,7 @@ RSpec.describe 'Generated project from template' do
       end
     end
 
-    ## https://github.com/deivid-rodriguez/pry-byebug/pull/346#issuecomment-817706135
-    pending { is_expected.to be true }
+    it { is_expected.to be true }
   end
 
   describe 'RuboCop check' do
