@@ -12,7 +12,7 @@ module Faraday
     # * call(env) - the main middleware invocation method.
     #   This already calls on_request and on_complete, so you normally don't need to override it.
     #   You may need to in case you need to "wrap" the request or need more control
-    #   (see "retry" middleware: https://github.com/lostisland/faraday/blob/main/lib/faraday/request/retry.rb#L142).
+    #   (see "retry" middleware: https://github.com/lostisland/faraday-retry/blob/41b7ea27e30d99ebfed958abfa11d12b01f6b6d1/lib/faraday/retry/middleware.rb#L147).
     #   IMPORTANT: Remember to call `@app.call(env)` or `super` to not interrupt the middleware chain!
     class Middleware < Faraday::Middleware
       # This method will be called when the request is being prepared.
