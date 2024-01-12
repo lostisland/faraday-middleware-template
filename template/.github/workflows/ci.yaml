@@ -13,7 +13,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2'
+          ruby-version: ruby ## latest MRI
           bundler-cache: true
       - name: Run RuboCop
         run: bundle exec rubocop
