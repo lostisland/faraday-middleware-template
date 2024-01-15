@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 group :development, :test do
-  gem 'gem_generator', '~> 0.3.0'
+  gem 'gem_generator', '~> 0.4.0'
 
   gem 'ffaker', '~> 2.20'
   gem 'rspec', '~> 3.10'
