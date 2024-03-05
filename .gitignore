@@ -1,8 +1,10 @@
 .idea/
 .bundle/
 coverage/
+node_modules/
 
 Gemfile.lock
+package-lock.json
 
 .rvmrc
 .ruby-version

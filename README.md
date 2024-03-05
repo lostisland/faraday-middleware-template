@@ -24,8 +24,8 @@ First of all, you should decide on the name of your middleware.
 The current convention (which is by no means mandatory) is to call middleware gems as `faraday-<something>`.
 Here are some examples:
 
-* `Hashie::Mash::Rash`: [`faraday-rashify`][faraday-rashify]
-* XML (request): [`faraday-encode_xml`][faraday-encode_xml]
+*   `Hashie::Mash::Rash`: [`faraday-rashify`][faraday-rashify]
+*   XML (request): [`faraday-encode_xml`][faraday-encode_xml]
 
 Then, you should call the generation command, like this:
 
