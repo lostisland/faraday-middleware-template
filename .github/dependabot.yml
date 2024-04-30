@@ -5,6 +5,8 @@ updates:
     schedule:
       interval: "weekly"
   - package-ecosystem: "bundler"
-    directory: "/"
+    directories:
+      - "/"
+      - "/template"
     schedule:
       interval: "weekly"
