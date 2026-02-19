@@ -3,14 +3,15 @@
 source 'https://rubygems.org'
 
 group :development, :test do
-  gem 'gem_generator', '~> 0.4.0'
+  gem 'gem_generator', '~> 1.0'
 
   gem 'ffaker', '~> 2.20'
+  gem 'reline'
   gem 'rspec', '~> 3.10'
 end
 
 group :development, :lint do
-  gem 'rubocop', '~> 1.63.0'
-  gem 'rubocop-performance', '~> 1.21.0'
-  gem 'rubocop-rspec', '~> 2.29.1'
+  gem 'rubocop', '~> 1.84'
+  gem 'rubocop-performance', '~> 1.26'
+  gem 'rubocop-rspec', '~> 3.9'
 end

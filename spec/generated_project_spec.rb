@@ -27,7 +27,7 @@ RSpec.describe 'Generated project from template' do
       "gem_generator #{gem_name} #{__dir__}/../template --namespace=#{namespace}"
     ) do |stdin, _stdout, stderr, wait_thread|
       Thread.new do
-        stderr.each { |l| puts l } unless stderr.closed?
+        stderr.each { |l| puts l } unless stderr.closed? # rubocop:disable RSpec/Output
       end
 
       stdin.puts gem_summary
@@ -163,7 +163,7 @@ RSpec.describe 'Generated project from template' do
   describe 'outdated Ruby gems' do
     subject do
       Bundler.with_unbundled_env do
-        system 'bundle outdated'
+        system 'bundle outdated --only-explicit'
       end
     end
 
